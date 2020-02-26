@@ -1,28 +1,27 @@
-function setup() {
-    createCanvas(windowWidth, windowHeight);
-    background('black');
-    
- }
-  
- function corners(x, y, size) {
-    noStroke();
-    fill(size + 100, y, 100);
-    rect(x, y, size, size);
-    fill(size/x + 100, x, y);
-    rect(x, y + 300, size, size);
-    fill(y + 100, x, 100);
-    rect(x + 300, y, size, size);
-    fill(x + 100, y, 50);
-    rect(x + 300, y + 300, size, size);
- }
+let step = 0; 
+function setup(){
+   createCanvas(500, 600);
+   //   sand color
+   background(213, 167, 121);
+   colorMode(RGB);
+   
+   noStroke();
+   fill(152, 215, 221);
+   rect(0, 0, width, 3*height/5);
+}
+
+function draw(){
+   seaFoam();
+
+}
+
+function seaFoam(){
+   noStroke();
+   fill(255);
+   // background(213, 167, 121);
+   let n = map(noise(step), 0, 1, 3*height/6, 3*height/4); 
+   step += 0.5;
  
- function draw(){
+   ellipse(step, n, 20, 20, 0.5);
 
-    background('black');
-    let posStart = 0; 
-    let size = 80; 
-    corners(mouseX, mouseY, size);
-    corners(mouseX+10, 10, size);
-    corners(mouseX+20, -1*(mouseY+20), size);
-
- }
+}
