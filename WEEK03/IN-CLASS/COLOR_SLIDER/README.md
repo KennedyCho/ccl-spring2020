@@ -1,5 +1,7 @@
 # Activity: Color Slider
 
+[p5 web editor sketch](https://editor.p5js.org/KennedyCho/sketches/sNN24KWq)
+
 In this activity, you will create a new p5.js project folder. You will make a series of changes to a p5 sketch, and commit each one.
 
 This activity has three goals:
